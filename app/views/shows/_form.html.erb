@@ -26,6 +26,15 @@
     <%= form.number_field :duration %>
   </div>
 
+  <ul>
+    <%= form.fields_for :genres do |genre_form| %>
+      <li>
+        <%= genre_form.label :name %>
+        <%= genre_form.text_field :name %>
+      </li>
+    <% end %>
+  </ul>
+
   <div class="actions">
     <%= form.submit %>
   </div>

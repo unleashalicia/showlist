@@ -15,6 +15,7 @@ class ShowsController < ApplicationController
   # GET /shows/new
   def new
     @show = Show.new
+    3.times { @show.genres.build }
   end
 
   # GET /shows/1/edit
@@ -69,6 +70,6 @@ class ShowsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def show_params
-      params.require(:show).permit(:name, :description, :duration)
+      params.require(:show).permit(:name, :description, :duration, genres_attributes: [:name])
     end
 end

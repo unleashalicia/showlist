@@ -11,9 +11,15 @@
 </p>
 
 <p>
-  <strong>Duration:</strong>
+  <strong>Duration in Minutes:</strong>
   <%= @show.duration %>
 </p>
+
+<p><strong>Genres</strong></p>
+<% @show.genres.each do |genre| %>
+  <p><%= genre.name %></p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_show_path(@show) %> |
 <%= link_to 'Back', shows_path %>
