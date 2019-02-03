@@ -2,10 +2,8 @@
 
 one:
   name: MyString
-  description: MyString
-  duration: 1
+  show: one
 
 two:
   name: MyString
-  description: MyString
-  duration: 1
+  show: two
